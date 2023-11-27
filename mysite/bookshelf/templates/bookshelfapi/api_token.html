@@ -1,0 +1,16 @@
+{% extends 'bookshelf/base.html' %}
+
+{% block title %}API token{% endblock %}
+
+{% block content %}
+<div class="features" style="text-align: center;">
+  <p>
+    <strong style="display: inline;">Your API token:</strong>
+    Token {{ token }}
+  </p>
+  <p>
+    The token key should be included in the Authorization HTTP header. 
+    The key should be prefixed by the string literal "Token", with whitespace separating the two strings.
+  </p>
+</div>
+{% endblock %}

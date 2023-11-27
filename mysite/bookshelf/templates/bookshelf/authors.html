@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Authors{% endblock %}
+
+{% block content %}
+<p></p>
+<div class="selection-preview">
+    <div class="container">
+        <div class="row">
+            {% for author in author_list %}
+            <div class="col-lg-4 col-sm-6">
+                <div class="pic">
+                    <div class="card bg-light mb-3" style="max-width: 25rem;">
+                        <div class="card-header">
+                            <p>{{author.name}}</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{author.description|truncatechars:100}}</p>
+                            <a class="btn btn-info" href="{% url 'author_detail' author.slug %}">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

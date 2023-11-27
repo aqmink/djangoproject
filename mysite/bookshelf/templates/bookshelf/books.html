@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Books{% endblock %}
+
+{% block content %}
+<p></p>
+<div class="selection-preview">
+    <div class="container">
+        <div class="row">
+            {% for book in book_list %}
+            <div class="col-lg-4 col-sm-6">
+                <div class="pic">
+                    <div class="card bg-light mb-3" style="max-width: 25rem;">
+                        <div class="card-header">
+                            <p>{{ book.title }}</p>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ book.description|truncatechars:100 }}</p>
+                            <a href="{% url 'author_detail' book.author.slug %}" class="card-link">{{ book.author }}</a>
+                        </div>
+                        <div class="card-body">
+                            <a class="btn btn-info" href="{% url 'book_detail' book.slug %}">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

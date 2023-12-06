@@ -36,6 +36,11 @@
 <center>
     <h2>Reviews</h2>
 </center>
+{% if not commens %}
+<center>
+<p>There are no reviews here yet. Be the first</p>
+</center>
+{% endif %}
 {% for comment in comments %}
 <p></p>
 <div class="comment">

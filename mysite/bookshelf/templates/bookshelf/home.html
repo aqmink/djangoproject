@@ -4,12 +4,42 @@
 
 {% block content %}
 <center>
-    <h1>Welcome {{ user }}, here you can find a book for yourself</h1>
+    <h3>Welcome {{ user }}, here you can find a book</h3>
 </center>
 <div class="features">
   <div class="card">
     <div class="card-body">
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div style="float: right;">
+        <a href="books/fahrenheit-451">
+          <img src="media\book_pictures\Fahrenheit_451_1st_ed_cover.jpg">
+        </a>
+      </div>
+      <div class="card-body">
+        <p class="card-text" style="margin: auto;">
+          The most famous writers with their works are collected on this site.
+          More than a hundred books are on here.
+          You can also write reviews for any book 
+          or read reviews from other users to learn more about a particular book.
+        </p>
+        <p></p>
+        <p class="card-text" style="margin: auto;">
+          To quickly find the book you need, use the search in the upper right corner. 
+          He searches for a book by title or author's name 
+          among all the books that are currently available
+        </p>
+      <p></p>
+      </div>
+      <div class="card-body" style="margin-top: 20%;">
+        <a href="books/the-sea-wolf" style="float: left;">
+          <img src="media\book_pictures\The_Sea_Wolf.jpg" width="280px"> 
+        </a>
+      </div>
+      <div class="card-text" style="margin-left: 35%;">
+        <h6 class="card-title" style="margin-left: 50%;">API</h6>
+        <p class="card-text">
+          ...
+        </p>
+      </div>
     </div>
   </div>
 </div>

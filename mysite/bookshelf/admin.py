@@ -13,6 +13,7 @@ class BookModelAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'description', 'author', )
     list_display_links = ('title', )
     prepopulated_fields = {'slug': ('title', )}
+    list_select_related = ('author', )
 
 
 admin.site.register(Book, BookModelAdmin)
